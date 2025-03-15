@@ -1,6 +1,11 @@
 # Ignore everything
 *
 
-# But not the landing page
+# But allow these files
 !landingpage.html
 !.gitignore
+!index.html
+!ai_response.html
+!detect_food.html
+!assets/
+!assets/**/*

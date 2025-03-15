@@ -2,9 +2,14 @@
 <html class="no-js" lang="en">
 <head>
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8727235995900916"
-     crossorigin="anonymous"></script>
-    <meta name="google-adsense-account" content="ca-pub-8727235995900916">
+
+<!--    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8727235995900916"-->
+<!--     crossorigin="anonymous"></script>-->
+
+
+<!--    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8727235995900916"-->
+<!--     crossorigin="anonymous"></script>-->
+<!--    <meta name="google-adsense-account" content="ca-pub-8727235995900916">-->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-TPT4ET0Y2Q"></script>
 <script>
@@ -82,167 +87,6 @@
     }
 </style>
 
-<style>
-    .auth-modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.5);
-    }
-
-    .auth-modal-content {
-        background-color: white;
-        margin: 10% auto;
-        padding: 20px;
-        border-radius: 8px;
-        width: 90%;
-        max-width: 400px;
-        position: relative;
-    }
-
-    .close-modal {
-        position: absolute;
-        right: 20px;
-        top: 10px;
-        font-size: 28px;
-        cursor: pointer;
-    }
-
-    .auth-buttons {
-        margin-left: auto;
-        display: flex;
-        gap: 10px;
-    }
-
-    .auth-nav-button {
-        padding: 8px 20px;
-        border-radius: 4px;
-        border: none;
-        cursor: pointer;
-        font-weight: 500;
-        transition: all 0.3s ease;
-    }
-
-    .login-btn {
-        background-color: transparent;
-        border: 1px solid #007bff;
-        color: #007bff;
-    }
-
-    .signup-btn {
-        background-color: #007bff;
-        color: white;
-    }
-
-    .login-btn:hover {
-        background-color: rgba(0,123,255,0.1);
-    }
-
-    .signup-btn:hover {
-        background-color: #0056b3;
-    }
-</style>
-
-<style>
-    /* Login and Signup Button Styles */
-    .navbar-btn {
-        background-color: #e09026;
-        color: white !important;
-        padding: 8px 16px;
-        border-radius: 5px;
-        margin-left: 10px;
-        transition: all 0.3s ease;
-    }
-
-    .navbar-btn:hover {
-        background-color: #ffffff;
-        color: #e09026 !important;
-        border: 1px solid #e09026;
-    }
-
-    .navbar-btn.signup {
-        background-color: #ffffff;
-        color: #e09026 !important;
-        border: 1px solid #e09026;
-    }
-
-    .navbar-btn.signup:hover {
-        background-color: #e09026;
-        color: #ffffff !important;
-    }
-</style>
-
-<style>
-    .auth-buttons {
-        display: flex;
-        gap: 10px;
-        margin-left: 15px;
-    }
-
-    .auth-nav-button {
-        padding: 8px 16px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-weight: 500;
-        border: 1px solid transparent;
-    }
-
-    .login-btn {
-        background-color: #e09026;
-        color: white;
-        border: none;
-    }
-
-    .login-btn:hover {
-        background-color: white;
-        color: #e09026;
-        border: 1px solid #e09026;
-    }
-
-    .signup-btn {
-        background-color: white;
-        color: #e09026;
-        border: 1px solid #e09026;
-    }
-
-    .signup-btn:hover {
-        background-color: #e09026;
-        color: white;
-        border: 1px solid #e09026;
-    }
-</style>
-
-<style>
-    /* Auth Button Styles */
-    .auth-buttons {
-        display: flex;
-        gap: 10px;
-        margin-left: auto;
-    }
-
-    .auth-button {
-        padding: 10px 20px;
-        border-radius: 5px;
-        background-color: #e09026;
-        color: white;
-        text-decoration: none;
-        border: none;
-        cursor: pointer;
-        font-weight: 500;
-        transition: all 0.3s ease;
-    }
-
-    .auth-button:hover {
-        background-color: #c97f1d;
-        color: white;
-    }
-</style>
-
 </head>
 
 
@@ -311,11 +155,9 @@
                                             <a class="page-scroll" href="#blog">Join Wait List</a>
                                         </li>
                                     </ul>
-                                    <div class="navbar-nav">
-                                        <div class="auth-buttons">
-                                            <button class="auth-button" onclick="signIn()">Log In</button>
-                                            <button class="auth-button" onclick="signUp()">Sign Up</button>
-                                        </div>
+                                    <div id="authButtons" class="navbar-nav">
+                                        <button class="main-btn" onclick="handleAuth('signin')">Log In</button>
+                                        <button class="main-btn main-btn-2" onclick="handleAuth('signup')">Sign Up</button>
                                     </div>
                                 </div> <!-- navbar collapse -->
                         </nav> <!-- navbar -->
@@ -372,7 +214,18 @@
     </section>
 
     <!--====== HEADER PART ENDS ======-->
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8727235995900916"
+     crossorigin="anonymous"></script>
+<!-- meal -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8727235995900916"
+     data-ad-slot="2906995242"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     <!--====== FEATURES PART START ======-->
 
     <section id="features" class="features_area pt-35 pb-80">
@@ -526,7 +379,18 @@
 
 
     <!--====== FEATURES PART ENDS ======-->
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8727235995900916"
+     crossorigin="anonymous"></script>
+<!-- meal -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8727235995900916"
+     data-ad-slot="2906995242"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     <!--====== ABOUT PART START ======-->
 
     <section id="about" class="about_area pt-30 pb-80">
@@ -562,7 +426,18 @@
 
 
     <!--====== ABOUT PART ENDS ======-->
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8727235995900916"
+     crossorigin="anonymous"></script>
+<!-- meal -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8727235995900916"
+     data-ad-slot="2906995242"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     <!--====== APP FEATURES PART START ======-->
 
     <section id="app_features">
@@ -660,7 +535,18 @@
 
 
     <!--====== PRICNG PART ENDS ======-->
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8727235995900916"
+     crossorigin="anonymous"></script>
+<!-- meal -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8727235995900916"
+     data-ad-slot="2906995242"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     <!--====== DOWNLOAD APP PART START ======-->
 
     <section id="download" class="download_app_area pt-80 mb-80">
@@ -708,7 +594,18 @@
 
 
     <!--====== DOWNLOAD APP PART ENDS ======-->
-
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8727235995900916"
+     crossorigin="anonymous"></script>
+<!-- meal -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8727235995900916"
+     data-ad-slot="2906995242"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     <!--====== BLOG PART START ======-->
 
     <section id="blog" class="blog_area pt-80 pb-80">
@@ -823,16 +720,11 @@
     <script src="assets/js/main.js"></script>
 
     <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js" type="module"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js" type="module"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js" type="module"></script>
-    
-    <script type="module">
-        // Import Firebase functions
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js';
-        import { getAuth, signInWithPopup, GoogleAuthProvider } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js';
-        import { getAnalytics } from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics.js';
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-analytics-compat.js"></script>
 
+    <script>
         // Your Firebase configuration
         const firebaseConfig = {
             apiKey: "AIzaSyDfeNB97dUeCtbSBTqTa_oZLNFUoDRCpLg",
@@ -844,39 +736,100 @@
             measurementId: "G-XV5LYL1RYJ"
         };
 
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const auth = getAuth(app);
-        const provider = new GoogleAuthProvider();
+        // Initialize Firebase with debug logging
+        try {
+            firebase.initializeApp(firebaseConfig);
+            console.log('Firebase initialized successfully');
+        } catch (error) {
+            console.error('Error initializing Firebase:', error);
+            alert('Error initializing Firebase: ' + error.message);
+        }
 
-        // Make auth functions available globally
-        window.signIn = async function() {
-            try {
-                const result = await signInWithPopup(auth, provider);
-                console.log("Successfully signed in:", result.user.email);
-            } catch (error) {
-                console.error("Error during sign in:", error);
-            }
+        const auth = firebase.auth();
+        
+        // Set auth persistence to LOCAL to maintain login state
+        auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
+            .then(() => {
+                console.log('Auth persistence set to LOCAL');
+            })
+            .catch((error) => {
+                console.error('Error setting persistence:', error);
+            });
+
+        // Authentication functions
+        window.handleAuth = function(mode) {
+            console.log('Starting authentication process for:', mode);
+            const provider = new firebase.auth.GoogleAuthProvider();
+            provider.addScope('email');
+            
+            // Force re-prompt to avoid cached credentials issues
+            provider.setCustomParameters({
+                prompt: 'select_account'
+            });
+            
+            auth.signInWithPopup(provider)
+                .then((result) => {
+                    console.log(`Successfully ${mode}:`, result.user.email);
+                    updateUIForUser(result.user);
+                })
+                .catch((error) => {
+                    if (error.code === 'auth/unauthorized-domain') {
+                        alert('Please add localhost:8000 to authorized domains in Firebase Console:\n1. Go to Firebase Console\n2. Select Authentication\n3. Sign-in Methods tab\n4. Add domain under Authorized domains');
+                    } else {
+                        alert(`Error during ${mode}: ${error.message}`);
+                    }
+                    console.error(`Error during ${mode}:`, error);
+                });
         };
 
-        window.signUp = async function() {
-            try {
-                const result = await signInWithPopup(auth, provider);
-                console.log("Successfully signed up:", result.user.email);
-            } catch (error) {
-                console.error("Error during sign up:", error);
-            }
-        };
-
-        // Auth state observer
+        // Handle auth state changes
         auth.onAuthStateChanged((user) => {
-            if (user) {
-                console.log("User is signed in:", user.email);
-            } else {
-                console.log("User is signed out");
-            }
+            console.log('Auth state changed:', user ? 'User logged in' : 'User logged out');
+            updateUIForUser(user);
         });
+
+        // Update UI based on auth state
+        function updateUIForUser(user) {
+            console.log('Updating UI for user:', user);
+            const authButtons = document.getElementById('authButtons');
+            const testAppButton = document.querySelector('a[href="ai_response.html"]');
+            
+            if (user) {
+                // User is signed in
+                authButtons.innerHTML = `
+                    <button class="main-btn" onclick="handleSignOut()">Sign Out</button>
+                    <span class="user-email" style="color: #fff; margin-left: 10px;">${user.email}</span>
+                `;
+                if (testAppButton) {
+                    testAppButton.style.display = 'inline-block';
+                }
+            } else {
+                // User is signed out
+                authButtons.innerHTML = `
+                    <button class="main-btn" onclick="handleAuth('signin')">Log In</button>
+                    <button class="main-btn main-btn-2" onclick="handleAuth('signup')">Sign Up</button>
+                `;
+                if (testAppButton) {
+                    testAppButton.style.display = 'none';
+                }
+            }
+        }
+
+        // Sign out function
+        window.handleSignOut = function() {
+            console.log('Starting sign out process');
+            auth.signOut()
+                .then(() => {
+                    console.log('Signed out successfully');
+                })
+                .catch((error) => {
+                    console.error('Error signing out:', error);
+                    alert('Error signing out: ' + error.message);
+                });
+        };
+
+        // Initial UI update
+        updateUIForUser(auth.currentUser);
     </script>
 </body>
 
