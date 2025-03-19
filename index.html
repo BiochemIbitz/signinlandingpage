@@ -5,8 +5,12 @@
 
 <!--    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8727235995900916"-->
 <!--     crossorigin="anonymous"></script>-->
-
-
+<!--    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8727235995900916"-->
+<!--     crossorigin="anonymous"></script>-->
+<!--    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8727235995900916"-->
+<!--     crossorigin="anonymous"></script>-->
+<!--    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8727235995900916"-->
+<!--     crossorigin="anonymous"></script>-->
 <!--    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8727235995900916"-->
 <!--     crossorigin="anonymous"></script>-->
 <!--    <meta name="google-adsense-account" content="ca-pub-8727235995900916">-->
@@ -87,6 +91,129 @@
     }
 </style>
 
+<style>
+    /* Authentication Button Styles */
+    #authButtons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 65px;
+        position: relative;
+    }
+
+    #authButtons .main-btn {
+        display: inline-block;
+        padding: 8px 0;
+        font-size: 16px;
+        font-weight: 500;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        text-decoration: none;
+        line-height: 1.5;
+        white-space: nowrap;
+        background: transparent;
+        transition: all 0.3s ease-out;
+        text-transform: capitalize;
+        position: relative;
+    }
+
+    #authButtons .main-btn:hover {
+        color: #FF6B6B;
+    }
+
+    #authButtons .profile-container {
+        position: relative;
+    }
+
+    #authButtons .profile-icon {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.3s ease-out;
+    }
+
+    #authButtons .profile-icon:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    #authButtons .profile-icon i {
+        font-size: 18px;
+    }
+
+    #authButtons .profile-dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        margin-top: 8px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        min-width: 200px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease-out;
+    }
+
+    #authButtons .profile-container:hover .profile-dropdown {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    #authButtons .profile-dropdown-header {
+        padding: 16px;
+        border-bottom: 1px solid #eee;
+    }
+
+    #authButtons .profile-dropdown-header .user-email {
+        color: #333;
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    #authButtons .profile-dropdown-content {
+        padding: 8px 0;
+    }
+
+    #authButtons .profile-dropdown-item {
+        padding: 8px 16px;
+        color: #333;
+        font-size: 14px;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    }
+
+    #authButtons .profile-dropdown-item:hover {
+        background-color: #f8f9fa;
+        color: #FF6B6B;
+    }
+
+    #authButtons .profile-dropdown-item i {
+        font-size: 16px;
+    }
+
+    @media (max-width: 767px) {
+        #authButtons {
+            margin-left: 0;
+            margin-top: 15px;
+            gap: 10px;
+        }
+    }
+</style>
+
 </head>
 
 
@@ -157,7 +284,7 @@
                                     </ul>
                                     <div id="authButtons" class="navbar-nav">
                                         <button class="main-btn" onclick="handleAuth('signin')">Log In</button>
-                                        <button class="main-btn main-btn-2" onclick="handleAuth('signup')">Sign Up</button>
+                                        <button class="main-btn" onclick="handleAuth('signup')">Sign Up</button>
                                     </div>
                                 </div> <!-- navbar collapse -->
                         </nav> <!-- navbar -->
@@ -484,7 +611,7 @@
                             </ul>
                         </div>
                         <div class="pricing_btn">
-                            <a href="#" class="main-btn main-btn-2">Get Started</a>
+                            <a href="#" class="main-btn">Get Started</a>
                         </div>
                     </div> <!-- single pricing -->
                 </div>
@@ -797,8 +924,26 @@
             if (user) {
                 // User is signed in
                 authButtons.innerHTML = `
-                    <button class="main-btn" onclick="handleSignOut()">Sign Out</button>
-                    <span class="user-email" style="color: #fff; margin-left: 10px;">${user.email}</span>
+                    <div class="profile-container">
+                        <div class="profile-icon">
+                            <i class="lni lni-user"></i>
+                        </div>
+                        <div class="profile-dropdown">
+                            <div class="profile-dropdown-header">
+                                <p class="user-email">${user.email}</p>
+                            </div>
+                            <div class="profile-dropdown-content">
+                                <div class="profile-dropdown-item">
+                                    <i class="lni lni-user"></i>
+                                    <span>Profile Details</span>
+                                </div>
+                                <div class="profile-dropdown-item" onclick="handleSignOut()">
+                                    <i class="lni lni-exit"></i>
+                                    <span>Sign Out</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 `;
                 if (testAppButton) {
                     testAppButton.style.display = 'inline-block';
@@ -807,7 +952,7 @@
                 // User is signed out
                 authButtons.innerHTML = `
                     <button class="main-btn" onclick="handleAuth('signin')">Log In</button>
-                    <button class="main-btn main-btn-2" onclick="handleAuth('signup')">Sign Up</button>
+                    <button class="main-btn" onclick="handleAuth('signup')">Sign Up</button>
                 `;
                 if (testAppButton) {
                     testAppButton.style.display = 'none';
